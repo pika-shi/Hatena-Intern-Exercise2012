@@ -26,7 +26,7 @@ sub render {
                 $line =~ s/{% $key %}/$str/;
             }
         }
-        utf8::encode($line);
+        #utf8::encode($line);
         $template .= $line;
     }
     return $template;
