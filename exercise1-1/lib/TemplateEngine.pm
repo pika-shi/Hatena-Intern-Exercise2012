@@ -27,7 +27,7 @@ sub render {
             }
         }
         utf8::encode($line);
-        $template .= $line;
+        #$template .= $line;
     }
     return $template;
 }
