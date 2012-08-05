@@ -6,7 +6,7 @@ use FindBin::libs;
 
 use_ok 'TemplateEngine';
 
-my $template = TemplateEngine->new( file => '../templates/main.html' );
+my $template = TemplateEngine->new( file => 'templates/main.html' );
 isa_ok $template, 'TemplateEngine';
 
 my $expected = <<'HTML';

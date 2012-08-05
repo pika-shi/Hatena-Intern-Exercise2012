@@ -26,9 +26,9 @@ sub render {
                 $line =~ s/{% $key %}/$str/;
             }
         }
-        utf8::encode($line);
-        #$template .= $line;
+        $template .= $line;
     }
+    binmode(STDOUT, ":utf8");
     return $template;
 }
 
