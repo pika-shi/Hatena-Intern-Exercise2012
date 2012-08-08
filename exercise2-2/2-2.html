@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="template.js"></script>
+    <script src="2-2.js"></script>
+    <link rel="stylesheet" type="text/css" href="2-2.css"/>
+    <body>
+      <script id="template" type="text/x-template">
+        <div>
+          <h2 style="border-bottom:solid 3px {% color %};">{% title %}</h2>
+	  <p>{% content %}</p>
+      </script>
+        </div>
+      </script>
+      <h1>日記</h1>
+      <div id="result">
+	ここに結果が出力される
+      </div>
+      <div style="float: right;">
+      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 30,
+          interval: 30000,
+          title: '',
+          subject: 'ぴかし',
+          width: 230,
+          height: 300,
+          theme: {
+            shell: {
+              background: 'skyblue',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#ffffff',
+              color: '#444444',
+              links: '#407fc2'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: true,
+            behavior: 'all'
+          }
+        }).render().setUser('pika_shi').start();
+      </script>
+      </div>
+    </body>
+</html>
